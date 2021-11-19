@@ -1,7 +1,7 @@
 {
   "name": "@stdlib/math-base-special-cabs",
   "version": "0.0.6",
-  "description": "Compute an absolute value of a complex number.",
+  "description": "Compute an absolute value of a double-precision complex floating-point number.",
   "license": "Apache-2.0",
   "author": {
     "name": "The Stdlib Authors",
@@ -37,18 +37,19 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/math-base-special-hypot": "^0.0.x"
+    "@stdlib/complex-imag": "^0.0.x",
+    "@stdlib/complex-real": "^0.0.x",
+    "@stdlib/math-base-special-hypot": "^0.0.x",
+    "@stdlib/types": "^0.0.x"
   },
   "devDependencies": {
     "@stdlib/bench": "^0.0.x",
     "@stdlib/complex-float64": "^0.0.x",
-    "@stdlib/complex-imag": "^0.0.x",
-    "@stdlib/complex-real": "^0.0.x",
     "@stdlib/constants-float64-eps": "^0.0.x",
     "@stdlib/math-base-assert-is-nan": "^0.0.x",
     "@stdlib/math-base-special-abs": "^0.0.x",
-    "@stdlib/math-base-special-round": "^0.0.x",
-    "@stdlib/random-base-randu": "^0.0.x",
+    "@stdlib/random-base-discrete-uniform": "^0.0.x",
+    "@stdlib/random-base-uniform": "^0.0.x",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
     "tap-spec": "5.x.x"

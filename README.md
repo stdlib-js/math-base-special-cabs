@@ -20,13 +20,13 @@ limitations under the License.
 
 # Absolute Value
 
-[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] [![dependencies][dependencies-image]][dependencies-url]
+[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Compute an [absolute value][absolute-value] of a complex number.
+> Compute an [absolute value][absolute-value] of a double-precision [complex][@stdlib/complex/float64] floating-point number.
 
 <section class="intro">
 
-The [absolute value][absolute-value] of a complex number is defined as
+The [absolute value][absolute-value] of a [complex][@stdlib/complex/float64] number is defined as
 
 <!-- <equation class="equation" label="eq:absolute_value_complex" align="center" raw="|a + bi| = \sqrt{a^2 + b^2}" alt="Absolute value"> -->
 
@@ -61,12 +61,14 @@ npm install @stdlib/math-base-special-cabs
 var cabs = require( '@stdlib/math-base-special-cabs' );
 ```
 
-#### cabs( re, im )
+#### cabs( z )
 
-Computes an [absolute value][absolute-value] of a `complex` number comprised of a **real** component `re` and an **imaginary** component `im`.
+Computes an [absolute value][absolute-value] of a double-precision [complex][@stdlib/complex/float64] floating-point number.
 
 ```javascript
-var y = cabs( 5.0, 3.0 );
+var Complex128 = require( '@stdlib/complex-float64' );
+
+var y = cabs( new Complex128( 5.0, 3.0 ) );
 // returns ~5.83
 ```
 
@@ -78,26 +80,20 @@ var y = cabs( 5.0, 3.0 );
 
 ## Examples
 
+<!-- eslint-disable max-len -->
+
 <!-- eslint no-undef: "error" -->
 
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64' );
-var randu = require( '@stdlib/random-base-randu' );
-var round = require( '@stdlib/math-base-special-round' );
-var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' );
 var cabs = require( '@stdlib/math-base-special-cabs' );
 
-var re;
-var im;
 var z;
 var i;
-
 for ( i = 0; i < 100; i++ ) {
-    re = round( randu()*100.0 ) - 50.0;
-    im = round( randu()*100.0 ) - 50.0;
-    z = new Complex128( re, im );
-    console.log( 'cabs(%s) = %d', z.toString(), cabs( real(z), imag(z) ) );
+    z = new Complex128( discreteUniform( -50, 50 ), discreteUniform( -50, 50 ) );
+    console.log( 'cabs(%s) = %d', z.toString(), cabs( z ) );
 }
 ```
 
@@ -165,8 +161,12 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/math-base-special-cabs/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/math-base-special-cabs?branch=main
 
+<!--
+
 [dependencies-image]: https://img.shields.io/david/stdlib-js/math-base-special-cabs.svg
 [dependencies-url]: https://david-dm.org/stdlib-js/math-base-special-cabs/main
+
+-->
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
 [chat-url]: https://gitter.im/stdlib-js/stdlib/
@@ -178,6 +178,8 @@ Copyright &copy; 2016-2021. The Stdlib [Authors][stdlib-authors].
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/math-base-special-cabs/main/LICENSE
 
 [absolute-value]: https://en.wikipedia.org/wiki/Absolute_value
+
+[@stdlib/complex/float64]: https://github.com/stdlib-js/complex-float64
 
 <!-- <related-links> -->
 
