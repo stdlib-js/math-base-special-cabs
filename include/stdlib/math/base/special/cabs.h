@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2021 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,26 +16,25 @@
 * limitations under the License.
 */
 
-'use strict';
+#ifndef STDLIB_MATH_BASE_SPECIAL_CABS_H
+#define STDLIB_MATH_BASE_SPECIAL_CABS_H
+
+#include <complex.h>
+
+/*
+* If C++, prevent name mangling so that the compiler emits a binary file having undecorated names, thus mirroring the behavior of a C compiler.
+*/
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /**
-* Compute the absolute value of a double-precision complex floating-point number.
-*
-* @module @stdlib/math-base-special-cabs
-*
-* @example
-* var Complex128 = require( '@stdlib/complex-float64' );
-* var cabs = require( '@stdlib/math-base-special-cabs' );
-*
-* var v = cabs( new Complex128( 5.0, 3.0 ) );
-* // returns ~5.83
+* Computes the absolute value of a double-precision complex floating-point number.
 */
+double stdlib_base_cabs( const double complex z );
 
-// MODULES //
+#ifdef __cplusplus
+}
+#endif
 
-var main = require( './main.js' );
-
-
-// EXPORTS //
-
-module.exports = main;
+#endif // !STDLIB_MATH_BASE_SPECIAL_CABS_H

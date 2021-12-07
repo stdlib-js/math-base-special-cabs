@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2021 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,26 +16,20 @@
 * limitations under the License.
 */
 
-'use strict';
+#include "stdlib/math/base/special/cabs.h"
+#include "stdlib/math/base/special/hypot.h"
+#include <complex.h>
 
 /**
-* Compute the absolute value of a double-precision complex floating-point number.
+* Computes the absolute value of a double-precision complex floating-point number.
 *
-* @module @stdlib/math-base-special-cabs
+* @param z       number
+* @return        result
 *
 * @example
-* var Complex128 = require( '@stdlib/complex-float64' );
-* var cabs = require( '@stdlib/math-base-special-cabs' );
-*
-* var v = cabs( new Complex128( 5.0, 3.0 ) );
+* double y = stdlib_base_cabs( 5.0+3.0*I );
 * // returns ~5.83
 */
-
-// MODULES //
-
-var main = require( './main.js' );
-
-
-// EXPORTS //
-
-module.exports = main;
+double stdlib_base_cabs( const double complex z ) {
+	return stdlib_base_hypot( creal( z ), cimag( z ) );
+}
