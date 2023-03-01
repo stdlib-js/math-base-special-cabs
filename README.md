@@ -43,30 +43,38 @@ which corresponds to the length of a vector from the origin to a complex value p
 
 <!-- /.intro -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/math-base-special-cabs
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var cabs = require( '@stdlib/math-base-special-cabs' );
+cabs = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cabs@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var cabs = require( 'path/to/vendor/umd/math-base-special-cabs/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cabs@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.cabs;
+})();
+</script>
 ```
 
 #### cabs( z )
@@ -92,10 +100,15 @@ var y = cabs( new Complex128( 5.0, 3.0 ) );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var Complex128 = require( '@stdlib/complex-float64' );
-var discreteUniform = require( '@stdlib/random-base-discrete-uniform' );
-var cabs = require( '@stdlib/math-base-special-cabs' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cabs@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 var z;
 var i;
@@ -103,6 +116,11 @@ for ( i = 0; i < 100; i++ ) {
     z = new Complex128( discreteUniform( -50, 50 ), discreteUniform( -50, 50 ) );
     console.log( 'cabs(%s) = %d', z.toString(), cabs( z ) );
 }
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -111,104 +129,7 @@ for ( i = 0; i < 100; i++ ) {
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/math/base/special/cabs.h"
-```
-
-#### stdlib_base_cabs( z )
-
-Computes the [absolute value][absolute-value] of a double-precision complex floating-point number.
-
-```c
-#include "stdlib/complex/float64.h"
-
-stdlib_complex128_t z = stdlib_complex128( 5.0, 3.0 );
-
-double y = stdlib_base_cabs( z );
-// returns ~5.83
-```
-
-The function accepts the following arguments:
-
--   **z**: `[in] stdlib_complex128_t` input value.
-
-```c
-double stdlib_base_cabs( const stdlib_complex128_t complex z );
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/math/base/special/cabs.h"
-#include "stdlib/complex/float64.h"
-#include "stdlib/complex/reim.h"
-#include <stdio.h>
-
-int main() {
-    const stdlib_complex128_t x[] = {
-        stdlib_complex128( 3.14, 1.0 ),
-        stdlib_complex128( -3.14, -1.0 ),
-        stdlib_complex128( 0.0, 0.0 ),
-        stdlib_complex128( 0.0/0.0, 0.0/0.0 )
-    };
-
-    stdlib_complex128_t v;
-    double re;
-    double im;
-    double y;
-    int i;
-    for ( i = 0; i < 4; i++ ) {
-        v = x[ i ];
-        y = stdlib_base_cabs( v );
-        stdlib_reim( v, &re, &im );
-        printf( "f(%lf + %lf) = %lf\n", re, im, y );
-    }
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -296,13 +217,13 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [absolute-value]: https://en.wikipedia.org/wiki/Absolute_value
 
-[@stdlib/complex/float64]: https://github.com/stdlib-js/complex-float64
+[@stdlib/complex/float64]: https://github.com/stdlib-js/complex-float64/tree/umd
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/cabs2]: https://github.com/stdlib-js/math-base-special-cabs2
+[@stdlib/math/base/special/cabs2]: https://github.com/stdlib-js/math-base-special-cabs2/tree/umd
 
-[@stdlib/math/base/special/abs]: https://github.com/stdlib-js/math-base-special-abs
+[@stdlib/math/base/special/abs]: https://github.com/stdlib-js/math-base-special-abs/tree/umd
 
 <!-- </related-links> -->
 
