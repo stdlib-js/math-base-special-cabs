@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2023 The Stdlib Authors.
+* Copyright (c) 2019 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,33 +16,31 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-var addon = require( './../src/addon.node' );
-
-
-// MAIN //
+import { Complex128 } from '@stdlib/types/complex';
 
 /**
 * Computes the absolute value of a double-precision complex floating-point number.
 *
-* @private
-* @param {Complex128} z - complex number
-* @returns {number} absolute value
+* ## Notes
+*
+* -   The absolute value of a complex number is its distance from zero.
+*
+* @param z - complex number
+* @returns absolute value
 *
 * @example
-* var Complex128 = require( '@stdlib/complex-float64' );
+* var Complex128 = require( `@stdlib/complex/float64` );
 *
 * var v = cabs( new Complex128( 5.0, 3.0 ) );
 * // returns ~5.83
 */
-function cabs( z ) {
-	return addon( z );
-}
+declare function cabs( z: Complex128 ): number;
 
 
 // EXPORTS //
 
-module.exports = cabs;
+export = cabs;
