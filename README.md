@@ -65,7 +65,7 @@ which corresponds to the length of a vector from the origin to a complex value p
 ## Usage
 
 ```javascript
-import cabs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cabs@deno/mod.js';
+import cabs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cabs@v0.1.0-deno/mod.js';
 ```
 
 #### cabs( z )
@@ -94,7 +94,7 @@ var y = cabs( new Complex128( 5.0, 3.0 ) );
 ```javascript
 import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64@deno/mod.js';
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@deno/mod.js';
-import cabs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cabs@deno/mod.js';
+import cabs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cabs@v0.1.0-deno/mod.js';
 
 var z;
 var i;
