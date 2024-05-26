@@ -33,11 +33,11 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Compute the [absolute value][absolute-value] of a double-precision [complex][@stdlib/complex/float64] floating-point number.
+> Compute the [absolute value][absolute-value] of a double-precision [complex][@stdlib/complex/float64/ctor] floating-point number.
 
 <section class="intro">
 
-The [absolute value][absolute-value] of a [complex][@stdlib/complex/float64] number is defined as
+The [absolute value][absolute-value] of a [complex][@stdlib/complex/float64/ctor] number is defined as
 
 <!-- <equation class="equation" label="eq:absolute_value_complex" align="center" raw="|a + bi| = \sqrt{a^2 + b^2}" alt="Absolute value"> -->
 
@@ -88,10 +88,10 @@ var cabs = require( '@stdlib/math-base-special-cabs' );
 
 #### cabs( z )
 
-Computes an [absolute value][absolute-value] of a double-precision [complex][@stdlib/complex/float64] floating-point number.
+Computes an [absolute value][absolute-value] of a double-precision [complex][@stdlib/complex/float64/ctor] floating-point number.
 
 ```javascript
-var Complex128 = require( '@stdlib/complex-float64' );
+var Complex128 = require( '@stdlib/complex-float64-ctor' );
 
 var y = cabs( new Complex128( 5.0, 3.0 ) );
 // returns ~5.83
@@ -110,7 +110,7 @@ var y = cabs( new Complex128( 5.0, 3.0 ) );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var Complex128 = require( '@stdlib/complex-float64' );
+var Complex128 = require( '@stdlib/complex-float64-ctor' );
 var discreteUniform = require( '@stdlib/random-base-discrete-uniform' );
 var cabs = require( '@stdlib/math-base-special-cabs' );
 
@@ -157,7 +157,7 @@ for ( i = 0; i < 100; i++ ) {
 Computes the [absolute value][absolute-value] of a double-precision complex floating-point number.
 
 ```c
-#include "stdlib/complex/float64.h"
+#include "stdlib/complex/float64/ctor.h"
 
 stdlib_complex128_t z = stdlib_complex128( 5.0, 3.0 );
 
@@ -193,7 +193,7 @@ double stdlib_base_cabs( const stdlib_complex128_t complex z );
 
 ```c
 #include "stdlib/math/base/special/cabs.h"
-#include "stdlib/complex/float64.h"
+#include "stdlib/complex/float64/ctor.h"
 #include "stdlib/complex/reim.h"
 #include <stdio.h>
 
@@ -316,7 +316,7 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [absolute-value]: https://en.wikipedia.org/wiki/Absolute_value
 
-[@stdlib/complex/float64]: https://github.com/stdlib-js/complex-float64
+[@stdlib/complex/float64/ctor]: https://github.com/stdlib-js/complex-float64-ctor
 
 <!-- <related-links> -->
 
