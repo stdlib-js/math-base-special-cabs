@@ -65,6 +65,11 @@ which corresponds to the length of a vector from the origin to a complex value p
 ## Usage
 
 ```javascript
+import cabs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cabs@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-special-cabs/tags). For example,
+
+```javascript
 import cabs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cabs@v0.2.2-esm/index.mjs';
 ```
 
@@ -99,7 +104,7 @@ var y = cabs( new Complex128( 5.0, 3.0 ) );
 
 import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64-ctor@esm/index.mjs';
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@esm/index.mjs';
-import cabs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cabs@v0.2.2-esm/index.mjs';
+import cabs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-cabs@esm/index.mjs';
 
 var z;
 var i;
