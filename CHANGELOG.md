@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-27)
+## Unreleased (2025-10-28)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`6886e73`](https://github.com/stdlib-js/stdlib/commit/6886e73708b6bac09283744fe3d88f3b4f5001e1) - **chore:** add structured package data for `math/base/special/cabs` [(#8267)](https://github.com/stdlib-js/stdlib/pull/8267) _(by Nakul Krishnakumar, Athan Reines)_
 -   [`24e19f9`](https://github.com/stdlib-js/stdlib/commit/24e19f9d7fd8a648489afe4ba29940a4bfbeab6f) - **chore:** minor clean-up _(by Philipp Burckhardt)_
 -   [`630ddb7`](https://github.com/stdlib-js/stdlib/commit/630ddb777824b5f6e501fda6dadf4ce41dccb964) - **test:** replace equal with strictEqual _(by Karan Anand)_
 -   [`1aa6c6d`](https://github.com/stdlib-js/stdlib/commit/1aa6c6d65fe035bd63db09873e75692f98fda273) - **test:** add tests for C99 edge cases [(#6389)](https://github.com/stdlib-js/stdlib/pull/6389) _(by Karan Anand)_
@@ -27,9 +28,11 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 4 people contributed to this release. Thank you to the following contributors:
 
+-   Athan Reines
 -   Karan Anand
+-   Nakul Krishnakumar
 -   Philipp Burckhardt
 
 </section>
