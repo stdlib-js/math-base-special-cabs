@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2021 The Stdlib Authors.
+* Copyright (c) 2019 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,28 +16,31 @@
 * limitations under the License.
 */
 
-#include "stdlib/math/base/special/cabs.h"
-#include "stdlib/math/base/special/hypot.h"
-#include "stdlib/complex/float64/ctor.h"
-#include "stdlib/complex/float64/reim.h"
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { Complex128 } from '@stdlib/types/complex';
 
 /**
 * Computes the absolute value of a double-precision complex floating-point number.
 *
-* @param z       number
-* @return        result
+* ## Notes
+*
+* -   The absolute value of a complex number is its distance from zero.
+*
+* @param z - complex number
+* @returns absolute value
 *
 * @example
-* #include "stdlib/complex/float64/ctor.h"
+* var Complex128 = require( '@stdlib/complex-float64-ctor' );
 *
-* stdlib_complex128_t z = stdlib_complex128( 5.0, 3.0 );
-*
-* double y = stdlib_base_cabs( z );
+* var v = cabs( new Complex128( 5.0, 3.0 ) );
 * // returns ~5.83
 */
-double stdlib_base_cabs( const stdlib_complex128_t z ) {
-	double re;
-	double im;
-	stdlib_complex128_reim( z, &re, &im );
-	return stdlib_base_hypot( re, im );
-}
+declare function cabs( z: Complex128 ): number;
+
+
+// EXPORTS //
+
+export = cabs;
