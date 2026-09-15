@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-09-03)
+## Unreleased (2026-09-15)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`a694451`](https://github.com/stdlib-js/stdlib/commit/a6944514c10643264f1079383c1b9d005757fafb) - **test:** migrate `math/base/special/cabs` to ULP-based assertions [(#15254)](https://github.com/stdlib-js/stdlib/pull/15254) _(by Philipp Burckhardt)_
 -   [`06e1536`](https://github.com/stdlib-js/stdlib/commit/06e1536018d5db9ac1c1373e209501283042dcb1) - **test:** migrate `math/base/special/cabs` to ULP-based testing [(#11758)](https://github.com/stdlib-js/stdlib/pull/11758) _(by Mandeep2333)_
 -   [`c73c8b3`](https://github.com/stdlib-js/stdlib/commit/c73c8b39bd76529182ea2b3423c6f0feab434774) - **bench:** refactor to use string interpolation in `math/base/special` [(#11387)](https://github.com/stdlib-js/stdlib/pull/11387) _(by Karan Anand)_
 
@@ -25,10 +26,11 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Karan Anand
 -   Mandeep2333
+-   Philipp Burckhardt
 
 </section>
 
